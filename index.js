@@ -5,7 +5,7 @@ const fs = require("fs");
 client.commands = new Discord.Collection();
 client.cooldown = new Discord.Collection();
 client.config = {
-    TOKEN: "OTE1ODM4NDExNjc0MzYxODY2.Yaha_A.DPx8duPJLLhCC1tZnKJJH6eypjY", //Discord Bot Token
+    TOKEN: "", //Discord Bot Token
     prefix: ".",
     cooldown: 15000
 };
