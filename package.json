@@ -12,13 +12,19 @@
     "node": "12.x"
   },
   "dependencies": {
-    "discord.js": "^12.2.0",
-    "hastebin-gen": "^2.0.5",
-    "quick.db": "^7.1.1",
+    "@discordjs/opus": "github:discordjs/opus",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "audio-effects": "^1.2.4",
     "canvacord": "^5.0.4",
+    "discord.js": "^12.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "hastebin-gen": "^2.0.5",
+    "jumble-words": "^1.0.1",
     "node-fetch": "^2.6.0",
-    "twemoji-parser": "^13.0.0",
+    "quick.db": "^7.1.1",
     "snowflake-api": "^3.0.3",
-    "jumble-words": "^1.0.1"
+    "sox": "^0.1.0",
+    "sox-stream": "^2.0.6",
+    "twemoji-parser": "^13.0.0"
   }
 }

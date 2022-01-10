@@ -1,4 +1,8 @@
 const fs = require("fs");
+const sox = require("sox-stream");
+
+
+const { PassThrough, Writable } = require('stream')
 
 module.exports.run = async (client, message, args) => {
 
@@ -8,9 +12,11 @@ module.exports.run = async (client, message, args) => {
     if (!fs.existsSync(`./recorded-${message.author.id}.pcm`)) return message.channel.send("Your audio is not recorded!");
 
     const connection = await message.member.voice.channel.join();
-    const stream = fs.createReadStream(`./recorded-${message.author.id}.pcm`);
+    //const Rstream = fs.createReadStream(`./recorded-${message.author.id}.pcm`);
 
-    const dispatcher = connection.play(stream, {
+    const output = fs.createReadStream(`./recorded-${message.author.id}.pcm`);
+
+    const dispatcher = connection.play(output, {
         type: "converted"
     });
 
